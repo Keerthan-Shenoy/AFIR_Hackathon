@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document View</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: 0 auto; }
+        .document { white-space: pre-wrap; }
+        .back-link { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="back-link">
+        <a href="/">← Back to Search</a>
+    </div>
+    <h2>{{ document.title }}</h2>
+    <div class="document">
+        {{ document.body }}
+    </div>
+</body>
+</html>

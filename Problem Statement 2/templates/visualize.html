@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visualization</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>PageRank Scores</h1>
+    <ul>
+        {% for node, score in ranks.items() %}
+            <li><strong>{{ node }}</strong>: {{ "%.4f"|format(score) }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Convergence Plot</h2>
+    <img src="{{ url_for('static', filename='convergence.png') }}" width="600">
+
+    <h2>Graph Manipulation</h2>
+    <form method="post" action="{{ url_for('update') }}">
+        <input name="source" placeholder="Source Node" required>
+        <input name="target" placeholder="Target Node" required>
+        <button name="action" value="add">Add Edge</button>
+        <button name="action" value="remove">Remove Edge</button>
+    </form>
+
+    <h3>Current Edges</h3>
+    <ul>
+        {% for u, v in graph %}
+            <li>{{ u }} → {{ v }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('index') }}">Reset Graph</a>
+</div>
+</body>
+</html>

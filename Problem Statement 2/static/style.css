@@ -1,0 +1,20 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    padding: 30px;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    max-width: 700px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
