@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "title": "PageRank Algorithm",
+    "content": "PageRank is an algorithm used by Google Search to rank web pages in their search engine results."
+  },
+  {
+    "id": 2,
+    "title": "BERT NLP Model",
+    "content": "BERT (Bidirectional Encoder Representations from Transformers) is a transformer-based machine learning technique for NLP."
+  }
+]
